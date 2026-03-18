@@ -1,0 +1,13 @@
+# PDF gerado (regenerar com Chrome headless)
+*.pdf
+
+# Aliança Code — sistema interno
+.alianca-code/
+.antigravity/
+.cursor/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+QWEN.md
+diretriz.json
+mcp.config.json
