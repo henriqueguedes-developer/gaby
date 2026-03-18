@@ -90,6 +90,7 @@
   /* ─── HERO ─── */
   #hero {
     min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,7 +98,8 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding: 80px 24px;
+    padding: 100px 24px;
+    box-sizing: border-box;
   }
 
   .hero-bg {
@@ -1534,10 +1536,16 @@
     .garantia-grid { grid-template-columns: 1fr !important; }
     .gateways-grid { grid-template-columns: 1fr !important; }
     .developer-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .melhorias-grid { grid-template-columns: 1fr !important; }
+    .feature-checks { grid-template-columns: 1fr !important; }
+    
     section { padding: 60px 20px !important; }
     .section-inner { padding: 0 !important; }
     .hero-title { font-size: 38px !important; }
     .badge-premium { font-size: 14px !important; padding: 6px 16px !important; }
+    .hero-cta { flex-direction: column; width: 100%; max-width: 320px; }
+    .btn-gold, .btn-outline { width: 100%; justify-content: center; }
+    .scroll-indicator { display: none; }
   }
 
   /* ─── NAV ─── */
@@ -1616,7 +1624,7 @@
       Checkout sem falhas, pagamento integrado e experiência mobile pensada para quem compra pelo celular.
     </p>
 
-    <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:40px; animation: fadeDown 1s ease 0.9s both;">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:12px; justify-content:center; margin-bottom:48px; animation: fadeDown 1s ease 0.9s both; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto;" class="feature-checks">
       <span style="display:inline-flex; align-items:center; gap:6px; font-size:16px; color:var(--rose-muted);"><i class="fas fa-check" style="color:var(--gold);"></i> Checkout transparente</span>
       <span style="display:inline-flex; align-items:center; gap:6px; font-size:16px; color:var(--rose-muted);"><i class="fas fa-check" style="color:var(--gold);"></i> Gateway estável</span>
       <span style="display:inline-flex; align-items:center; gap:6px; font-size:16px; color:var(--rose-muted);"><i class="fas fa-check" style="color:var(--gold);"></i> Mobile-first</span>
@@ -1664,7 +1672,7 @@
           O objetivo deste projeto é modernizar o site da Gaby Hair e transformá-lo em uma plataforma de vendas mais eficiente — resolvendo os problemas atuais de pagamento, adicionando recursos que o negócio já precisa e garantindo uma base sólida para crescimento.
         </p>
         <p style="font-size:16px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:14px;">Principais melhorias previstas</p>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:10px;" class="melhorias-grid">
           <div style="display:flex;align-items:center;gap:10px;font-size:17px;color:var(--white);"><i class="fas fa-check" style="color:var(--gold);font-size:17px;"></i> Checkout transparente</div>
           <div style="display:flex;align-items:center;gap:10px;font-size:17px;color:var(--white);"><i class="fas fa-check" style="color:var(--gold);font-size:17px;"></i> Gateways estáveis e confiáveis</div>
           <div style="display:flex;align-items:center;gap:10px;font-size:17px;color:var(--white);"><i class="fas fa-check" style="color:var(--gold);font-size:17px;"></i> Experiência mobile otimizada</div>
