@@ -36,6 +36,8 @@
     font-size: 17px;
     line-height: 1.8;
     overflow-x: hidden;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
   }
 
   /* GRAIN TEXTURE */
@@ -161,11 +163,12 @@
   }
 
   .hero-title {
-    font-size: clamp(42px, 8vw, 90px);
+    font-size: clamp(36px, 10vw, 90px);
     font-weight: 400;
-    line-height: 1.05;
+    line-height: 1.1;
     animation: fadeDown 1s ease 0.6s both;
     margin-bottom: 24px;
+    letter-spacing: -1px;
   }
 
   .hero-title em {
@@ -177,13 +180,15 @@
 
   .hero-subtitle {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(16px, 2.5vw, 22px);
+    font-size: clamp(17px, 3vw, 22px);
     font-style: italic;
-    color: var(--rose-muted);
+    color: var(--white);
+    opacity: 0.9;
     max-width: 500px;
     text-align: center;
     margin: 0 auto 48px;
     animation: fadeDown 1s ease 0.8s both;
+    line-height: 1.5;
   }
 
   .hero-cta {
@@ -659,6 +664,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .site-nav { display: none !important; }
+    .site-header { padding: 10px 16px; }
+    .site-hero { flex-direction: column; text-align: center; padding: 40px 20px; }
+    .site-hero-img { display: none; }
+    .site-products { padding: 20px 16px; }
+    .product-info h4 { font-size: 14px; }
+    .product-price { font-size: 14px; }
   }
 
   .product-card {
@@ -1514,6 +1530,14 @@
     .incluso-grid { grid-template-columns: 1fr !important; }
     .cenario-grid { grid-template-columns: 1fr !important; }
     .riscos-grid { grid-template-columns: 1fr !important; }
+    .problema-grid { grid-template-columns: 1fr !important; }
+    .garantia-grid { grid-template-columns: 1fr !important; }
+    .gateways-grid { grid-template-columns: 1fr !important; }
+    .developer-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    section { padding: 60px 20px !important; }
+    .section-inner { padding: 0 !important; }
+    .hero-title { font-size: 38px !important; }
+    .badge-premium { font-size: 14px !important; padding: 6px 16px !important; }
   }
 
   /* ─── NAV ─── */
